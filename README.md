@@ -16,7 +16,7 @@ My design is an eight pointed star with animated LEDs. The shape is inspired by 
 The [design](KiCad/star-schematic-1.0.pdf) includes:
 * A [multivibrator](https://en.wikipedia.org/wiki/Multivibrator), implemented using two transistors - Q1 and Q2, four resistors - R50-R53, and two capacitors - C2 and C3. The multivibrator provides the clock for the rest of the circuit.
   * The choosen values of the R52, R53 - 62 k, C2 and C3 - 2.2 uF result in approximately 5.3 Hz frequency.
-  * The formula to calculate the frequency is f = 1 / (ln(2)(R52\*C2+R53\*C3)), or since R52 = R53 and C2 = C3, it can be simplifed to f ~= 0.72/(R52*C2).
+  * The formula to calculate the frequency is f = 1 / (ln(2)(R52\*C2+R53\*C3)), or since R52 = R53 and C2 = C3, it can be simplified to f ~= 0.72/(R52*C2).
 * A 4 bit [Johnson counter](https://en.wikipedia.org/wiki/Ring_counter), implemented using a 74*175 - four D-type flip-flops IC.
   * In my own build I used the [74LS175](https://www.ti.com/lit/ds/symlink/sn74ls174.pdf) IC, but I think any other series will work just as well.
 * 3 outputs of the counter are connected to the LEDs through current limiting resistors. The last output is not connected to the LEDs. This doubles the delay when all LEDs are on and when all LEDs are off.
